@@ -1,0 +1,2965 @@
+4836  futex(0x9b8998, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4835  futex(0xc000088148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4834  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  restart_syscall(<... resuming interrupted read ...> <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4832  <... restart_syscall resumed>)    = -1 ETIMEDOUT (Время ожидания соединения истекло)
+4832  nanosleep({tv_sec=0, tv_nsec=10000000}, NULL) = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0} <unfinished ...>
+4831  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=241172482, u64=9212757557999828994}}], 128, -1, NULL, 0) = 1
+4831  futex(0x959ca0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... futex resumed>)              = 0
+4831  <... futex resumed>)              = 1
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  accept4(3, {sa_family=AF_INET6, sin6_port=htons(39866), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28], SOCK_CLOEXEC|SOCK_NONBLOCK) = 8
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 8, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=208666625, u64=9212757557967323137}}) = 0
+4831  getsockname(8,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... getsockname resumed>{sa_family=AF_INET6, sin6_port=htons(8080), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28]) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+4831  setsockopt(8, SOL_SOCKET, SO_KEEPALIVE, [1], 4 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... setsockopt resumed>)         = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  setsockopt(8, SOL_TCP, TCP_KEEPINTVL, [15], 4) = 0
+4831  setsockopt(8, SOL_TCP, TCP_KEEPIDLE, [15], 4 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... setsockopt resumed>)         = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  futex(0xc000059948, FUTEX_WAKE_PRIVATE, 1) = 1
+4831  accept4(3,  <unfinished ...>
+4834  <... futex resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... accept4 resumed>0xc000062aac, [112], SOCK_CLOEXEC|SOCK_NONBLOCK) = -1 EAGAIN (Ресурс временно недоступен)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  epoll_pwait(5,  <unfinished ...>
+4831  read(8,  <unfinished ...>
+4834  <... epoll_pwait resumed>[{events=EPOLLOUT, data={u32=208666625, u64=9212757557967323137}}], 128, 0, NULL, 0) = 1
+4831  <... read resumed>"GET /bugs HTTP/1.1\r\nHost: localhost:8080\r\nUser-Agent: curl/7.88.1\r\nAccept: */*\r\n\r\n", 4096) = 82
+4832  <... nanosleep resumed>NULL)      = 0
+4834  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1) = 1
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... futex resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  write(7, "\0", 1)                 = 1
+4834  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=10191840, u64=10191840}}], 128, -1, NULL, 0) = 1
+4833  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  read(8,  <unfinished ...>
+4834  read(6,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... read resumed>"\0", 16)       = 1
+4831  <... read resumed>0xc00007c851, 1) = -1 EAGAIN (Ресурс временно недоступен)
+4834  epoll_pwait(5,  <unfinished ...>
+4833  <... nanosleep resumed>NULL)      = 0
+4834  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4834  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4831  futex(0x958280, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=1, tv_nsec=999471106}) = -1 ETIMEDOUT (Время ожидания соединения истекло)
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4833  <... epoll_pwait resumed>[], 128, 1999, NULL, 0) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  futex(0x958280, FUTEX_WAKE_PRIVATE, 1) = 1
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... futex resumed>)              = 0
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315358975042264.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_pwait(5, [], 128, 0, NULL, 0) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4833  <... openat resumed>)             = 9
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0} <unfinished ...>
+4833  futex(0x959ca0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... futex resumed>)              = -1 EAGAIN (Ресурс временно недоступен)
+4833  <... futex resumed>)              = 0
+4833  fcntl(9, F_GETFL <unfinished ...>
+4832  sched_yield( <unfinished ...>
+4833  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... sched_yield resumed>)        = 0
+4833  fcntl(9, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  futex(0x959bb8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4833  <... fcntl resumed>)              = 0
+4832  <... futex resumed>)              = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 9, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413697, u64=9212757557951070209}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4833  fcntl(9, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  fcntl(9, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  openat(AT_FDCWD, "/etc/localtime", O_RDONLY) = 10
+4832  <... nanosleep resumed>NULL)      = 0
+4833  read(10,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... read resumed>"TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\21\0\0\0\21\0\0\0\0\0\0\0N\0\0\0\21\0\0\0&\200\0\0\0\233_\36\307\235>\362y\236*\356\371\236\3679i\237\204W\371\240\330l\351\241\09\200\241<\246@\244\20m\300\244=2\260\245\25h\260\245=\3\300\247\36EP\265\244\31`\25'\247\320\26\30\334@\27\10\333P\27\372\17\300\30\352\16\320\31\333C@\32\314\223\320\33\274\240\360\34\254\221\360\35\234\202\360\36\214s\360\37|d\360 lU\360!\\F\360\"L7\360#<(\360$,\31\360%\34\n\360&\v\373\360'\5'p'\365\30p(\345\27\200)x\277\200)\324\372p*\304\353p+\264\334p,\244\315p-\224\276p.\204\257p/t\240p0d\221p1]\274\3602r\227\3603=\236\3604Ry\3605\35\200\36062[\3606\375b\3608\33xp8\335D\3609\373Zp:\275&\360;\333<p<\246Cp=\273\36p>\206%p?\233\0p@f\7pA\204\34\360BE\351pCc\376\360D%\313pEC\340\360F\5\255pG#\302\360G\356\311\360I\3\244\360I\316\253\360J\343\206\360K\256\215\360L\314\243pM\216o\360TL\35`\1\3\2\3\4\2\4\5\6\7\10\7\6\t\6\7\6\7\6\7\6\7\n\v\n\v\n\v\n\v\n\v\n\v\n\f\r\n\v\n\v\n\v\n\v\n\v\n\v\n\v\n\v\n\v\n\v\n\v\n\v\n\v\n\v\n\v\n\v\n\v\n\v\n\v\n\16\n\0\0#9\0\0\0\0#9\0\4\0\0001\207\1\10\0\0#w\0\4\0\0?\227\1\f\0\08@\1\21\0\0*0\0\25\0\08@\1\21\0\0FP\1\31\0\0\34 \0\35\0\0*0\0\25\0\08@\1\21\0\0*0\1!"..., 4096) = 1535
+4832  <... nanosleep resumed>NULL)      = 0
+4833  read(10,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... read resumed>"", 4096)       = 0
+4833  close(10 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... close resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  write(9, "2024-10-19T08:22:38+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  fork( <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fork resumed>)               = 5107
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315358978729246.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+5107  write(7, "\0", 1)                 = 1
+4833  <... openat resumed>)             = 10
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=10191840, u64=10191840}}], 128, -1, NULL, 0) = 1
+5107  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  fcntl(10, F_GETFL <unfinished ...>
+4831  read(6,  <unfinished ...>
+4833  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4831  <... read resumed>"\0", 16)       = 1
+4833  fcntl(10, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 10, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413698, u64=9212757557951070210}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4833  fcntl(10, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4831  epoll_pwait(5,  <unfinished ...>
+4833  fcntl(10, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4833  write(10, "2024-10-19T08:22:38+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... write resumed>)              = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315358980451921.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... openat resumed>)             = 11
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(11, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4833  fcntl(11, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 11, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413699, u64=9212757557951070211}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  fcntl(11, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4833  fcntl(11, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  write(11, "2024-10-19T08:22:38+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315358981651867.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... openat resumed>)             = 12
+4833  fcntl(12, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(12, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 12, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413700, u64=9212757557951070212}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  fcntl(12, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4833  fcntl(12, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  write(12, "2024-10-19T08:22:38+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315358982745232.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... openat resumed>)             = 13
+4833  fcntl(13, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  fcntl(13, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 13, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413701, u64=9212757557951070213}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  fcntl(13, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(13, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0
+4833  write(13, "2024-10-19T08:22:38+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315358983774472.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... openat resumed>)             = 14
+4833  fcntl(14, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  fcntl(14, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 14, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413702, u64=9212757557951070214}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  fcntl(14, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(14, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  write(14, "2024-10-19T08:22:38+03:00", 25) = 25
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315358984774148.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... openat resumed>)             = 15
+4833  fcntl(15, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4833  fcntl(15, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 15, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413703, u64=9212757557951070215}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4833  fcntl(15, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4833  fcntl(15, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4833  write(15, "2024-10-19T08:22:38+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315358985055822.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 16
+4833  fcntl(16, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(16, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 16, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413704, u64=9212757557951070216}}) = -1 EPERM (Операция не позволена)
+4833  fcntl(16, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(16, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0
+4833  write(16, "2024-10-19T08:22:38+03:00", 25) = 25
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315358985329621.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... openat resumed>)             = 17
+4833  fcntl(17, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4833  fcntl(17, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 17, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413705, u64=9212757557951070217}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  getpid( <unfinished ...>
+4833  futex(0xc000059948, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... getpid resumed>)             = 4831
+4833  <... futex resumed>)              = 1
+4834  <... futex resumed>)              = 0
+4832  tgkill(4831, 4833, SIGURG <unfinished ...>
+4833  fcntl(17, F_GETFL <unfinished ...>
+4832  <... tgkill resumed>)             = 0
+4834  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=4831, si_uid=0} ---
+4833  rt_sigreturn({mask=[]})           = 34817
+4833  fcntl(17, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  write(17, "2024-10-19T08:22:38+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315358985759373.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 18
+4833  fcntl(18, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(18, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 18, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413706, u64=9212757557951070218}}) = -1 EPERM (Операция не позволена)
+4833  fcntl(18, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(18, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0
+4833  write(18, "2024-10-19T08:22:38+03:00", 25) = 25
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315358986051739.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... openat resumed>)             = 19
+4833  fcntl(19, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4833  fcntl(19, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 19, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413707, u64=9212757557951070219}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  fcntl(19, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4833  fcntl(19, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4833  write(19, "2024-10-19T08:22:38+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  write(1, "Recovered from panic: Random panic occurred!\n", 45) = 45
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  write(8, "HTTP/1.1 500 Internal Server Error\r\nContent-Type: text/plain; charset=utf-8\r\nX-Content-Type-Options: nosniff\r\nDate: Sat, 19 Oct 2024 05:22:38 GMT\r\nContent-Length: 22\r\n\r\nInternal Server Error\n", 191 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=40000},  <unfinished ...>
+4833  <... write resumed>)              = 191
+4833  futex(0xc000059948, FUTEX_WAKE_PRIVATE, 1) = 1
+4834  <... futex resumed>)              = 0
+4834  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  futex(0xc000059948, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... futex resumed>)              = -1 EAGAIN (Ресурс временно недоступен)
+4833  <... futex resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=80000},  <unfinished ...>
+4834  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4833  read(8, 0xc0001d0000, 4096)       = -1 EAGAIN (Ресурс временно недоступен)
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4831  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT|EPOLLRDHUP, data={u32=208666625, u64=9212757557967323137}}], 128, -1, NULL, 0) = 1
+4834  <... nanosleep resumed>NULL)      = 0
+4831  read(8,  <unfinished ...>
+4834  epoll_pwait(5,  <unfinished ...>
+4831  <... read resumed>"", 4096)       = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  epoll_ctl(5, EPOLL_CTL_DEL, 8, 0xc00002b914 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=160000},  <unfinished ...>
+4831  <... epoll_ctl resumed>)          = 0
+4831  close(8)                          = 0
+4831  futex(0x958280, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0} <unfinished ...>
+4834  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=241172482, u64=9212757557999828994}}], 128, -1, NULL, 0) = 1
+4834  futex(0x959ca0, FUTEX_WAKE_PRIVATE, 1) = 1
+4832  <... futex resumed>)              = 0
+4834  accept4(3,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... accept4 resumed>{sa_family=AF_INET6, sin6_port=htons(39880), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28], SOCK_CLOEXEC|SOCK_NONBLOCK) = 8
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 8, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=208666626, u64=9212757557967323138}}) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  getsockname(8, {sa_family=AF_INET6, sin6_port=htons(8080), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28]) = 0
+4834  setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  setsockopt(8, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+4834  setsockopt(8, SOL_TCP, TCP_KEEPINTVL, [15], 4) = 0
+4834  setsockopt(8, SOL_TCP, TCP_KEEPIDLE, [15], 4) = 0
+4834  futex(0x958280, FUTEX_WAKE_PRIVATE, 1) = 1
+4831  <... futex resumed>)              = 0
+4834  accept4(3,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... accept4 resumed>0xc000062aac, [112], SOCK_CLOEXEC|SOCK_NONBLOCK) = -1 EAGAIN (Ресурс временно недоступен)
+4831  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT, data={u32=208666626, u64=9212757557967323138}}], 128, 0, NULL, 0) = 1
+4831  epoll_pwait(5,  <unfinished ...>
+4834  read(8, "GET /bugs HTTP/1.1\r\nHost: localhost:8080\r\nUser-Agent: curl/7.88.1\r\nAccept: */*\r\n\r\n", 4096) = 82
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1) = 1
+4833  <... futex resumed>)              = 0
+4833  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315360314295453.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... openat resumed>)             = 20
+4834  fcntl(20, F_GETFL <unfinished ...>
+4833  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(20, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4833  futex(0xc000088148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4834  <... fcntl resumed>)              = 0
+4833  <... futex resumed>)              = 1
+4835  <... futex resumed>)              = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 20, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413708, u64=9212757557951070220}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4833  read(8,  <unfinished ...>
+4834  fcntl(20, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  futex(0xc000088148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4834  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4833  <... read resumed>0xc0000bc0d1, 1) = -1 EAGAIN (Ресурс временно недоступен)
+4834  fcntl(20, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4834  <... fcntl resumed>)              = 0
+4834  write(20, "2024-10-19T08:22:40+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4834  fork( <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... fork resumed>)               = 5114
+4832  <... nanosleep resumed>NULL)      = 0
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315360314816881.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+5114  write(7, "\0", 1 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+5114  <... write resumed>)              = 1
+4834  <... openat resumed>)             = 21
+4831  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=10191840, u64=10191840}}], 128, -1, NULL, 0) = 1
+5114  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4834  fcntl(21, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4831  read(6,  <unfinished ...>
+4834  fcntl(21, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4831  <... read resumed>"\0", 16)       = 1
+4834  <... fcntl resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 21, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413709, u64=9212757557951070221}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4831  epoll_pwait(5,  <unfinished ...>
+4834  fcntl(21, F_GETFL <unfinished ...>
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4834  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(21, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4834  <... fcntl resumed>)              = 0
+4834  write(21, "2024-10-19T08:22:40+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315360315135698.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 22
+4834  fcntl(22, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4834  fcntl(22, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... fcntl resumed>)              = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 22, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413710, u64=9212757557951070222}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(22, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(22, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  write(22, "2024-10-19T08:22:40+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... write resumed>)              = 25
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315360315350983.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 23
+4834  fcntl(23, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4834  fcntl(23, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... fcntl resumed>)              = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 23, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413711, u64=9212757557951070223}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(23, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(23, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  write(23, "2024-10-19T08:22:40+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... write resumed>)              = 25
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315360315553290.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 24
+4834  fcntl(24, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4834  fcntl(24, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... fcntl resumed>)              = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 24, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413712, u64=9212757557951070224}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(24, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(24, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  write(24, "2024-10-19T08:22:40+03:00", 25) = 25
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315360315765781.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 25
+4834  fcntl(25, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(25, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 25, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413713, u64=9212757557951070225}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(25, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(25, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  write(25, "2024-10-19T08:22:40+03:00", 25) = 25
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315360315997077.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... openat resumed>)             = 26
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(26, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(26, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 26, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413714, u64=9212757557951070226}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(26, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(26, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4834  write(26, "2024-10-19T08:22:40+03:00", 25) = 25
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315360316200164.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... openat resumed>)             = 27
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(27, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(27, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 27, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413715, u64=9212757557951070227}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(27, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(27, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4834  write(27, "2024-10-19T08:22:40+03:00", 25) = 25
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315360316402727.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... openat resumed>)             = 28
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(28, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(28, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 28, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413716, u64=9212757557951070228}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(28, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(28, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4834  write(28, "2024-10-19T08:22:40+03:00", 25) = 25
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315360316604910.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... openat resumed>)             = 29
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(29, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(29, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 29, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413717, u64=9212757557951070229}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(29, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(29, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4834  write(29, "2024-10-19T08:22:40+03:00", 25) = 25
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315360316808111.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... openat resumed>)             = 30
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(30, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(30, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 30, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413718, u64=9212757557951070230}}) = -1 EPERM (Операция не позволена)
+4832  <... nanosleep resumed>NULL)      = 0
+4834  fcntl(30, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(30, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4834  write(30, "2024-10-19T08:22:40+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315360317042084.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... openat resumed>)             = 31
+4834  fcntl(31, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(31, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 31, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413719, u64=9212757557951070231}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4834  fcntl(31, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(31, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  write(31, "2024-10-19T08:22:40+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... write resumed>)              = 25
+4834  write(1, "Recovered from panic: Random panic occurred!\n", 45) = 45
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4834  write(8, "HTTP/1.1 500 Internal Server Error\r\nContent-Type: text/plain; charset=utf-8\r\nX-Content-Type-Options: nosniff\r\nDate: Sat, 19 Oct 2024 05:22:40 GMT\r\nContent-Length: 22\r\n\r\nInternal Server Error\n", 191 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... write resumed>)              = 191
+4834  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... futex resumed>)              = 1
+4833  <... futex resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4834  <... futex resumed>)              = 0
+4833  <... futex resumed>)              = -1 EAGAIN (Ресурс временно недоступен)
+4831  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT|EPOLLRDHUP, data={u32=208666626, u64=9212757557967323138}}], 128, -1, NULL, 0) = 1
+4834  read(8,  <unfinished ...>
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4834  <... read resumed>"", 4096)       = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4834  epoll_ctl(5, EPOLL_CTL_DEL, 8, 0xc0000ca914 <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4834  <... epoll_ctl resumed>)          = 0
+4834  close(8)                          = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0} <unfinished ...>
+4831  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=241172482, u64=9212757557999828994}}], 128, -1, NULL, 0) = 1
+4831  futex(0x959ca0, FUTEX_WAKE_PRIVATE, 1) = 1
+4831  accept4(3,  <unfinished ...>
+4832  <... futex resumed>)              = 0
+4831  <... accept4 resumed>{sa_family=AF_INET6, sin6_port=htons(39884), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28], SOCK_CLOEXEC|SOCK_NONBLOCK) = 8
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 8, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=208666627, u64=9212757557967323139}}) = 0
+4831  getsockname(8, {sa_family=AF_INET6, sin6_port=htons(8080), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28]) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+4831  setsockopt(8, SOL_SOCKET, SO_KEEPALIVE, [1], 4 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... setsockopt resumed>)         = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  setsockopt(8, SOL_TCP, TCP_KEEPINTVL, [15], 4) = 0
+4831  setsockopt(8, SOL_TCP, TCP_KEEPIDLE, [15], 4) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  futex(0xc000059948, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... futex resumed>)              = 1
+4834  <... futex resumed>)              = 0
+4831  accept4(3,  <unfinished ...>
+4834  epoll_pwait(5,  <unfinished ...>
+4831  <... accept4 resumed>0xc000062aac, [112], SOCK_CLOEXEC|SOCK_NONBLOCK) = -1 EAGAIN (Ресурс временно недоступен)
+4834  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT, data={u32=208666627, u64=9212757557967323139}}], 128, 0, NULL, 0) = 1
+4834  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  read(8,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... read resumed>"GET /bugs HTTP/1.1\r\nHost: localhost:8080\r\nUser-Agent: curl/7.88.1\r\nAccept: */*\r\n\r\n", 4096) = 82
+4831  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1) = 1
+4833  <... futex resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4833  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315361367120025.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4833  <... nanosleep resumed>NULL)      = 0
+4831  <... openat resumed>)             = 32
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(32, F_GETFL <unfinished ...>
+4833  futex(0xc000088148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... futex resumed>)              = 1
+4831  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4835  <... futex resumed>)              = 0
+4833  read(8,  <unfinished ...>
+4831  fcntl(32, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4833  <... read resumed>0xc0000bc2b1, 1) = -1 EAGAIN (Ресурс временно недоступен)
+4835  futex(0xc000088148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 32, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413720, u64=9212757557951070232}}) = -1 EPERM (Операция не позволена)
+4831  fcntl(32, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4831  fcntl(32, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  write(32, "2024-10-19T08:22:41+03:00", 25) = 25
+4831  fork( <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fork resumed>)               = 5119
+4832  <... nanosleep resumed>NULL)      = 0
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315361367813958.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... openat resumed>)             = 33
+5119  write(7, "\0", 1 <unfinished ...>
+4831  fcntl(33, F_GETFL <unfinished ...>
+5119  <... write resumed>)              = 1
+4831  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=10191840, u64=10191840}}], 128, -1, NULL, 0) = 1
+4831  fcntl(33, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+5119  futex(0x958280, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  read(6,  <unfinished ...>
+4831  <... fcntl resumed>)              = 0
+4834  <... read resumed>"\0", 16)       = 1
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 33, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413721, u64=9212757557951070233}}) = -1 EPERM (Операция не позволена)
+4831  fcntl(33, F_GETFL <unfinished ...>
+4834  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  epoll_pwait(5,  <unfinished ...>
+4831  fcntl(33, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4831  write(33, "2024-10-19T08:22:41+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315361368271840.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 34
+4831  fcntl(34, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(34, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 34, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413722, u64=9212757557951070234}}) = -1 EPERM (Операция не позволена)
+4831  fcntl(34, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4831  fcntl(34, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  write(34, "2024-10-19T08:22:41+03:00", 25) = 25
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315361368521123.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 35
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(35, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4831  fcntl(35, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 35, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413723, u64=9212757557951070235}}) = -1 EPERM (Операция не позволена)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(35, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4831  fcntl(35, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4831  write(35, "2024-10-19T08:22:41+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315361368767215.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... openat resumed>)             = 36
+4831  fcntl(36, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4831  fcntl(36, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 36, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413724, u64=9212757557951070236}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4831  fcntl(36, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4831  fcntl(36, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4831  write(36, "2024-10-19T08:22:41+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... write resumed>)              = 25
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315361369006730.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 37
+4831  fcntl(37, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(37, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 37, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413725, u64=9212757557951070237}}) = -1 EPERM (Операция не позволена)
+4831  fcntl(37, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4831  fcntl(37, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  write(37, "2024-10-19T08:22:41+03:00", 25) = 25
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315361369239080.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 38
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(38, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4831  fcntl(38, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 38, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413726, u64=9212757557951070238}}) = -1 EPERM (Операция не позволена)
+4831  fcntl(38, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  fcntl(38, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4831  write(38, "2024-10-19T08:22:41+03:00", 25) = 25
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315361369470954.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... openat resumed>)             = 39
+4831  fcntl(39, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4831  fcntl(39, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 39, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413727, u64=9212757557951070239}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  fcntl(39, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4831  fcntl(39, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4831  write(39, "2024-10-19T08:22:41+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315361369702113.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 40
+4831  fcntl(40, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(40, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 40, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413728, u64=9212757557951070240}}) = -1 EPERM (Операция не позволена)
+4831  fcntl(40, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4831  fcntl(40, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  write(40, "2024-10-19T08:22:41+03:00", 25) = 25
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315361369959405.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 41
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(41, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4831  fcntl(41, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 41, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413729, u64=9212757557951070241}}) = -1 EPERM (Операция не позволена)
+4831  fcntl(41, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  fcntl(41, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4831  write(41, "2024-10-19T08:22:41+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315361370204798.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... openat resumed>)             = 42
+4831  fcntl(42, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4831  fcntl(42, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 42, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413730, u64=9212757557951070242}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4831  fcntl(42, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4831  fcntl(42, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4831  write(42, "2024-10-19T08:22:41+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... write resumed>)              = 25
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315361370450431.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 43
+4831  fcntl(43, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(43, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 43, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413731, u64=9212757557951070243}}) = -1 EPERM (Операция не позволена)
+4831  fcntl(43, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4831  fcntl(43, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  write(43, "2024-10-19T08:22:41+03:00", 25) = 25
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315361370684093.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 44
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(44, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4831  fcntl(44, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 44, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413732, u64=9212757557951070244}}) = -1 EPERM (Операция не позволена)
+4831  fcntl(44, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  fcntl(44, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4831  write(44, "2024-10-19T08:22:41+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4831  write(1, "Recovered from panic: Random panic occurred!\n", 45 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... write resumed>)              = 45
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  write(8, "HTTP/1.1 500 Internal Server Error\r\nContent-Type: text/plain; charset=utf-8\r\nX-Content-Type-Options: nosniff\r\nDate: Sat, 19 Oct 2024 05:22:41 GMT\r\nContent-Length: 22\r\n\r\nInternal Server Error\n", 191) = 191
+4831  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4833  <... futex resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... futex resumed>)              = 1
+4833  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  read(8, 0xc0001d0000, 4096)       = -1 EAGAIN (Ресурс временно недоступен)
+4834  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT|EPOLLRDHUP, data={u32=208666627, u64=9212757557967323139}}], 128, -1, NULL, 0) = 1
+4831  futex(0x958280, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  <... nanosleep resumed>NULL)      = 0
+4834  read(8,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... read resumed>"", 4096)       = 0
+4833  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  epoll_ctl(5, EPOLL_CTL_DEL, 8, 0xc0000ca914) = 0
+4834  close(8)                          = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0} <unfinished ...>
+4833  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=241172482, u64=9212757557999828994}}], 128, -1, NULL, 0) = 1
+4833  futex(0x959ca0, FUTEX_WAKE_PRIVATE, 1) = 1
+4832  <... futex resumed>)              = 0
+4833  accept4(3,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... accept4 resumed>{sa_family=AF_INET6, sin6_port=htons(52164), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28], SOCK_CLOEXEC|SOCK_NONBLOCK) = 8
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 8, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=208666628, u64=9212757557967323140}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... epoll_ctl resumed>)          = 0
+4833  getsockname(8, {sa_family=AF_INET6, sin6_port=htons(8080), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28]) = 0
+4833  setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... setsockopt resumed>)         = 0
+4833  setsockopt(8, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+4833  setsockopt(8, SOL_TCP, TCP_KEEPINTVL, [15], 4) = 0
+4833  setsockopt(8, SOL_TCP, TCP_KEEPIDLE, [15], 4) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4833  futex(0xc000059948, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... futex resumed>)              = 0
+4833  <... futex resumed>)              = 1
+4833  accept4(3, 0xc000062aac, [112], SOCK_CLOEXEC|SOCK_NONBLOCK) = -1 EAGAIN (Ресурс временно недоступен)
+4834  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT, data={u32=208666628, u64=9212757557967323140}}], 128, 0, NULL, 0) = 1
+4833  read(8,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  epoll_pwait(5,  <unfinished ...>
+4833  <... read resumed>"GET /bugs HTTP/1.1\r\nHost: localhost:8080\r\nUser-Agent: curl/7.88.1\r\nAccept: */*\r\n\r\n", 4096) = 82
+4833  futex(0x958280, FUTEX_WAKE_PRIVATE, 1) = 1
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... futex resumed>)              = 0
+4833  write(7, "\0", 1 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=10191840, u64=10191840}}], 128, -1, NULL, 0) = 1
+4833  <... write resumed>)              = 1
+4831  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4834  read(6,  <unfinished ...>
+4833  read(8,  <unfinished ...>
+4834  <... read resumed>"\0", 16)       = 1
+4833  <... read resumed>0xc0000bc461, 1) = -1 EAGAIN (Ресурс временно недоступен)
+4834  epoll_pwait(5,  <unfinished ...>
+4833  epoll_pwait(5,  <unfinished ...>
+4834  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4834  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... nanosleep resumed>NULL)      = 0
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4831  futex(0x958280, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=1, tv_nsec=999748260}) = -1 ETIMEDOUT (Время ожидания соединения истекло)
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... epoll_pwait resumed>[], 128, 1999, NULL, 0) = 0
+4834  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4834  futex(0x958280, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... futex resumed>)              = 1
+4831  <... futex resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364598406506.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4834  <... openat resumed>)             = 45
+4832  <... nanosleep resumed>NULL)      = 0
+4834  fcntl(45, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(45, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 45, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413733, u64=9212757557951070245}}) = -1 EPERM (Операция не позволена)
+4832  <... nanosleep resumed>NULL)      = 0
+4834  fcntl(45, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(45, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  write(45, "2024-10-19T08:22:44+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fork( <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  getpid()                          = 4831
+4832  tgkill(4831, 4834, SIGURG)        = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... fork resumed>)               = 5126
+4832  <... nanosleep resumed>NULL)      = 0
+4834  --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=4831, si_uid=0} ---
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  rt_sigreturn({mask=[]} <unfinished ...>
+5126  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4834  <... rt_sigreturn resumed>)       = 5126
+4832  <... nanosleep resumed>NULL)      = 0
+5126  <... futex resumed>)              = 0
+4832  getpid( <unfinished ...>
+4834  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+5126  write(7, "\0", 1 <unfinished ...>
+4832  <... getpid resumed>)             = 4831
+5126  <... write resumed>)              = 1
+4834  <... futex resumed>)              = 1
+4833  <... futex resumed>)              = 0
+5126  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  tgkill(4831, 4834, SIGURG <unfinished ...>
+4831  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=10191840, u64=10191840}}], 128, -1, NULL, 0) = 1
+4834  --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=4831, si_uid=0} ---
+4832  <... tgkill resumed>)             = 0
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4831  read(6,  <unfinished ...>
+4834  rt_sigreturn({mask=[]} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... read resumed>"\0", 16)       = 1
+4834  <... rt_sigreturn resumed>)       = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364602355669.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4834  <... openat resumed>)             = 46
+4834  fcntl(46, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(46, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 46, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413734, u64=9212757557951070246}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4834  fcntl(46, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(46, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  write(46, "2024-10-19T08:22:44+03:00", 25) = 25
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364603406095.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... openat resumed>)             = 47
+4834  fcntl(47, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(47, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 47, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413735, u64=9212757557951070247}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4834  fcntl(47, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(47, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... fcntl resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  write(47, "2024-10-19T08:22:44+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364603974849.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... openat resumed>)             = 48
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(48, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4834  fcntl(48, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... fcntl resumed>)              = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 48, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413736, u64=9212757557951070248}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(48, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4834  fcntl(48, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... fcntl resumed>)              = 0
+4834  write(48, "2024-10-19T08:22:44+03:00", 25) = 25
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364604468378.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... openat resumed>)             = 49
+4834  fcntl(49, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(49, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 49, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413737, u64=9212757557951070249}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4834  fcntl(49, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(49, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  write(49, "2024-10-19T08:22:44+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... write resumed>)              = 25
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364604769058.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 50
+4834  fcntl(50, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(50, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 50, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413738, u64=9212757557951070250}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(50, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(50, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4834  write(50, "2024-10-19T08:22:44+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364605071315.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... openat resumed>)             = 51
+4834  fcntl(51, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(51, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 51, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413739, u64=9212757557951070251}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(51, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(51, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  write(51, "2024-10-19T08:22:44+03:00", 25) = 25
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364605379037.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... openat resumed>)             = 52
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(52, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(52, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 52, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413740, u64=9212757557951070252}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(52, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(52, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4834  write(52, "2024-10-19T08:22:44+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364605687555.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... openat resumed>)             = 53
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(53, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(53, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 53, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413741, u64=9212757557951070253}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(53, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(53, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4834  write(53, "2024-10-19T08:22:44+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364606047695.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 54
+4834  fcntl(54, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(54, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 54, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413742, u64=9212757557951070254}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(54, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(54, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4834  write(54, "2024-10-19T08:22:44+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364606393314.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... openat resumed>)             = 55
+4834  fcntl(55, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(55, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 55, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413743, u64=9212757557951070255}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(55, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(55, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  write(55, "2024-10-19T08:22:44+03:00", 25) = 25
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364606738159.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... openat resumed>)             = 56
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(56, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(56, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 56, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413744, u64=9212757557951070256}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(56, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(56, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4834  write(56, "2024-10-19T08:22:44+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364607075749.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 57
+4834  fcntl(57, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(57, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 57, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413745, u64=9212757557951070257}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(57, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(57, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4834  write(57, "2024-10-19T08:22:44+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364607416551.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... openat resumed>)             = 58
+4834  fcntl(58, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(58, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 58, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413746, u64=9212757557951070258}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(58, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(58, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  write(58, "2024-10-19T08:22:44+03:00", 25) = 25
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364607760589.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... openat resumed>)             = 59
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(59, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(59, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 59, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413747, u64=9212757557951070259}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(59, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(59, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4834  write(59, "2024-10-19T08:22:44+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364608094883.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 60
+4834  fcntl(60, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(60, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 60, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413748, u64=9212757557951070260}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(60, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  fcntl(60, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4834  write(60, "2024-10-19T08:22:44+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364608435256.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... openat resumed>)             = 61
+4834  fcntl(61, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(61, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 61, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413749, u64=9212757557951070261}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(61, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(61, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=40000},  <unfinished ...>
+4834  write(61, "2024-10-19T08:22:44+03:00", 25) = 25
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315364608772966.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 62
+4832  <... nanosleep resumed>NULL)      = 0
+4834  fcntl(62, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=80000},  <unfinished ...>
+4834  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(62, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 62, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413750, u64=9212757557951070262}}) = -1 EPERM (Операция не позволена)
+4834  fcntl(62, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4834  fcntl(62, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=160000},  <unfinished ...>
+4834  write(62, "2024-10-19T08:22:44+03:00", 25) = 25
+4834  write(1, "Recovered from panic: Random panic occurred!\n", 45) = 45
+4834  write(8, "HTTP/1.1 500 Internal Server Error\r\nContent-Type: text/plain; charset=utf-8\r\nX-Content-Type-Options: nosniff\r\nDate: Sat, 19 Oct 2024 05:22:44 GMT\r\nContent-Length: 22\r\n\r\nInternal Server Error\n", 191 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=320000},  <unfinished ...>
+4834  <... write resumed>)              = 191
+4834  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1) = 1
+4833  <... futex resumed>)              = 0
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4834  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4833  <... futex resumed>)              = -1 EAGAIN (Ресурс временно недоступен)
+4834  <... futex resumed>)              = 0
+4833  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4834  read(8, 0xc0001d0000, 4096)       = -1 EAGAIN (Ресурс временно недоступен)
+4833  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT|EPOLLRDHUP, data={u32=208666628, u64=9212757557967323140}}], 128, -1, NULL, 0) = 1
+4834  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4831  read(8, "", 4096)                 = 0
+4831  epoll_ctl(5, EPOLL_CTL_DEL, 8, 0xc0000ca914 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_ctl resumed>)          = 0
+4832  nanosleep({tv_sec=0, tv_nsec=640000},  <unfinished ...>
+4831  close(8)                          = 0
+4831  epoll_pwait(5, [], 128, 0, NULL, 0) = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0} <unfinished ...>
+4831  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=241172482, u64=9212757557999828994}}], 128, -1, NULL, 0) = 1
+4831  futex(0x959ca0, FUTEX_WAKE_PRIVATE, 1) = 1
+4831  accept4(3,  <unfinished ...>
+4832  <... futex resumed>)              = 0
+4831  <... accept4 resumed>{sa_family=AF_INET6, sin6_port=htons(52170), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28], SOCK_CLOEXEC|SOCK_NONBLOCK) = 8
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 8, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=208666629, u64=9212757557967323141}}) = 0
+4831  getsockname(8, {sa_family=AF_INET6, sin6_port=htons(8080), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28]) = 0
+4831  setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  setsockopt(8, SOL_SOCKET, SO_KEEPALIVE, [1], 4 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... setsockopt resumed>)         = 0
+4831  setsockopt(8, SOL_TCP, TCP_KEEPINTVL, [15], 4) = 0
+4831  setsockopt(8, SOL_TCP, TCP_KEEPIDLE, [15], 4) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4833  <... futex resumed>)              = 0
+4831  <... futex resumed>)              = 1
+4833  epoll_pwait(5,  <unfinished ...>
+4831  accept4(3,  <unfinished ...>
+4833  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT, data={u32=208666629, u64=9212757557967323141}}], 128, 0, NULL, 0) = 1
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... accept4 resumed>0xc000062aac, [112], SOCK_CLOEXEC|SOCK_NONBLOCK) = -1 EAGAIN (Ресурс временно недоступен)
+4833  futex(0xc000059948, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... futex resumed>)              = 0
+4833  <... futex resumed>)              = 1
+4831  epoll_pwait(5,  <unfinished ...>
+4834  epoll_pwait(5,  <unfinished ...>
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4834  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4834  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  read(8,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... read resumed>"GET /bugs HTTP/1.1\r\nHost: localhost:8080\r\nUser-Agent: curl/7.88.1\r\nAccept: */*\r\n\r\n", 4096) = 82
+4833  futex(0xc000059948, FUTEX_WAKE_PRIVATE, 1) = 1
+4834  <... futex resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315365447496737.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... openat resumed>)             = 63
+4834  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(63, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  futex(0xc000088148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4833  fcntl(63, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... futex resumed>)              = 0
+4834  <... futex resumed>)              = 1
+4833  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  futex(0xc000088148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4834  read(8,  <unfinished ...>
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 63, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413751, u64=9212757557951070263}} <unfinished ...>
+4834  <... read resumed>0xc0000bc5b1, 1) = -1 EAGAIN (Ресурс временно недоступен)
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4834  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  fcntl(63, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(63, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0
+4833  write(63, "2024-10-19T08:22:45+03:00", 25) = 25
+4833  fork( <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fork resumed>)               = 5130
+4832  <... nanosleep resumed>NULL)      = 0
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315365448074795.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+5130  write(7, "\0", 1 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+5130  <... write resumed>)              = 1
+4831  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=10191840, u64=10191840}}], 128, -1, NULL, 0) = 1
+5130  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  <... openat resumed>)             = 64
+4831  read(6, "\0", 16)                 = 1
+4833  fcntl(64, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4831  epoll_pwait(5,  <unfinished ...>
+4833  fcntl(64, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4833  <... fcntl resumed>)              = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 64, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413752, u64=9212757557951070264}}) = -1 EPERM (Операция не позволена)
+4833  fcntl(64, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  fcntl(64, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4833  write(64, "2024-10-19T08:22:45+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315365448562635.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 65
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(65, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4833  fcntl(65, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 65, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413753, u64=9212757557951070265}}) = -1 EPERM (Операция не позволена)
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(65, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4833  fcntl(65, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4833  write(65, "2024-10-19T08:22:45+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315365448894135.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 66
+4833  fcntl(66, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(66, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 66, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413754, u64=9212757557951070266}}) = -1 EPERM (Операция не позволена)
+4833  fcntl(66, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(66, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0
+4833  write(66, "2024-10-19T08:22:45+03:00", 25) = 25
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315365449197427.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... openat resumed>)             = 67
+4833  fcntl(67, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4833  fcntl(67, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 67, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413755, u64=9212757557951070267}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4833  fcntl(67, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4833  fcntl(67, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4833  write(67, "2024-10-19T08:22:45+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... write resumed>)              = 25
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315365449494659.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 68
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(68, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4833  fcntl(68, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 68, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413756, u64=9212757557951070268}}) = -1 EPERM (Операция не позволена)
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(68, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4833  fcntl(68, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  write(68, "2024-10-19T08:22:45+03:00", 25) = 25
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315365449820880.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... openat resumed>)             = 69
+4833  fcntl(69, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4833  fcntl(69, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 69, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413757, u64=9212757557951070269}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4833  fcntl(69, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4833  fcntl(69, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4833  write(69, "2024-10-19T08:22:45+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... write resumed>)              = 25
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315365450128270.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 70
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(70, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4833  fcntl(70, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 70, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413758, u64=9212757557951070270}}) = -1 EPERM (Операция не позволена)
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(70, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4833  fcntl(70, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4833  write(70, "2024-10-19T08:22:45+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315365450433004.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... openat resumed>)             = 71
+4833  fcntl(71, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4833  fcntl(71, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 71, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413759, u64=9212757557951070271}}) = -1 EPERM (Операция не позволена)
+4833  fcntl(71, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4833  fcntl(71, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  write(71, "2024-10-19T08:22:45+03:00", 25) = 25
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315365450749180.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... openat resumed>)             = 72
+4833  fcntl(72, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4833  fcntl(72, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 72, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413760, u64=9212757557951070272}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4833  fcntl(72, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4833  fcntl(72, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4833  write(72, "2024-10-19T08:22:45+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... write resumed>)              = 25
+4833  write(1, "Recovered from panic: Random panic occurred!\n", 45) = 45
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  write(8, "HTTP/1.1 500 Internal Server Error\r\nContent-Type: text/plain; charset=utf-8\r\nX-Content-Type-Options: nosniff\r\nDate: Sat, 19 Oct 2024 05:22:45 GMT\r\nContent-Length: 22\r\n\r\nInternal Server Error\n", 191 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... write resumed>)              = 191
+4833  futex(0xc000059948, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4834  <... futex resumed>)              = 0
+4833  <... futex resumed>)              = 1
+4834  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4833  read(8, 0xc0000d6000, 4096)       = -1 EAGAIN (Ресурс временно недоступен)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT|EPOLLRDHUP, data={u32=208666629, u64=9212757557967323141}}], 128, -1, NULL, 0) = 1
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... nanosleep resumed>NULL)      = 0
+4831  read(8,  <unfinished ...>
+4834  epoll_pwait(5,  <unfinished ...>
+4831  <... read resumed>"", 4096)       = 0
+4831  epoll_ctl(5, EPOLL_CTL_DEL, 8, 0xc0000cb914 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_ctl resumed>)          = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  close(8)                          = 0
+4831  futex(0x958280, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0} <unfinished ...>
+4834  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=241172482, u64=9212757557999828994}}], 128, -1, NULL, 0) = 1
+4834  futex(0x959ca0, FUTEX_WAKE_PRIVATE, 1) = 1
+4832  <... futex resumed>)              = 0
+4834  accept4(3,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... accept4 resumed>{sa_family=AF_INET6, sin6_port=htons(52182), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28], SOCK_CLOEXEC|SOCK_NONBLOCK) = 8
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 8, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=208666630, u64=9212757557967323142}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... epoll_ctl resumed>)          = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  getsockname(8, {sa_family=AF_INET6, sin6_port=htons(8080), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28]) = 0
+4834  setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+4834  setsockopt(8, SOL_SOCKET, SO_KEEPALIVE, [1], 4 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... setsockopt resumed>)         = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  setsockopt(8, SOL_TCP, TCP_KEEPINTVL, [15], 4) = 0
+4834  setsockopt(8, SOL_TCP, TCP_KEEPIDLE, [15], 4) = 0
+4834  futex(0x958280, FUTEX_WAKE_PRIVATE, 1) = 1
+4832  <... nanosleep resumed>NULL)      = 0
+4834  accept4(3, 0xc000062aac, [112], SOCK_CLOEXEC|SOCK_NONBLOCK) = -1 EAGAIN (Ресурс временно недоступен)
+4831  <... futex resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4834  read(8, "GET /bugs HTTP/1.1\r\nHost: localhost:8080\r\nUser-Agent: curl/7.88.1\r\nAccept: */*\r\n\r\n", 4096) = 82
+4831  <... epoll_pwait resumed>[{events=EPOLLOUT, data={u32=208666630, u64=9212757557967323142}}], 128, 0, NULL, 0) = 1
+4831  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4834  read(8,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... read resumed>0xc0000bc761, 1) = -1 EAGAIN (Ресурс временно недоступен)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  epoll_pwait(5, [], 128, 0, NULL, 0) = 0
+4834  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... nanosleep resumed>NULL)      = 0
+4831  futex(0x958280, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=0, tv_nsec=999781456} <unfinished ...>
+4834  <... epoll_pwait resumed>[], 128, 999, NULL, 0) = 0
+4832  <... futex resumed>)              = -1 ETIMEDOUT (Время ожидания соединения истекло)
+4834  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4834  futex(0x958280, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... futex resumed>)              = 1
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... futex resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  openat(AT_FDCWD, "/tmp/server/file_1729315367612694567.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4834  <... openat resumed>)             = 73
+4832  <... nanosleep resumed>NULL)      = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4834  fcntl(73, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  fcntl(73, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 73, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413761, u64=9212757557951070273}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  getpid( <unfinished ...>
+4834  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  <... getpid resumed>)             = 4831
+4832  tgkill(4831, 4834, SIGURG <unfinished ...>
+4834  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... tgkill resumed>)             = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... futex resumed>)              = 1
+4833  <... futex resumed>)              = 0
+4834  --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=4831, si_uid=0} ---
+4832  <... nanosleep resumed>NULL)      = 0
+4833  futex(0xc000088148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4834  rt_sigreturn({mask=[]} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... futex resumed>)              = 0
+4834  <... rt_sigreturn resumed>)       = 1
+4833  <... futex resumed>)              = 1
+4834  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4835  futex(0xc000088148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  fcntl(73, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  fcntl(73, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4833  write(73, "2024-10-19T08:22:47+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... write resumed>)              = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fork( <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fork resumed>)               = 5136
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+5136  write(7, "\0", 1 <unfinished ...>
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315367616825646.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+5136  <... write resumed>)              = 1
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... openat resumed>)             = 74
+4831  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=10191840, u64=10191840}}], 128, -1, NULL, 0) = 1
+5136  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  fcntl(74, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4831  read(6,  <unfinished ...>
+4833  fcntl(74, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0
+4831  <... read resumed>"\0", 16)       = 1
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 74, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413762, u64=9212757557951070274}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4833  fcntl(74, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4833  fcntl(74, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  write(74, "2024-10-19T08:22:47+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... write resumed>)              = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315367619006300.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... openat resumed>)             = 75
+4833  fcntl(75, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  fcntl(75, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 75, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413763, u64=9212757557951070275}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  fcntl(75, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4833  fcntl(75, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  write(75, "2024-10-19T08:22:47+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4833  write(1, "Recovered from panic: Random panic occurred!\n", 45 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... write resumed>)              = 45
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  write(8, "HTTP/1.1 500 Internal Server Error\r\nContent-Type: text/plain; charset=utf-8\r\nX-Content-Type-Options: nosniff\r\nDate: Sat, 19 Oct 2024 05:22:47 GMT\r\nContent-Length: 22\r\n\r\nInternal Server Error\n", 191 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... write resumed>)              = 191
+4833  futex(0xc000088148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... futex resumed>)              = 1
+4835  <... futex resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  futex(0xc000088148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  read(8,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... read resumed>0xc0000d6000, 4096) = -1 EAGAIN (Ресурс временно недоступен)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4831  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT|EPOLLRDHUP, data={u32=208666630, u64=9212757557967323142}}], 128, -1, NULL, 0) = 1
+4832  <... nanosleep resumed>NULL)      = 0
+4831  read(8,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... read resumed>"", 4096)       = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  epoll_ctl(5, EPOLL_CTL_DEL, 8, 0xc0000cb914 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_ctl resumed>)          = 0
+4831  close(8 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... close resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0} <unfinished ...>
+4831  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=241172482, u64=9212757557999828994}}], 128, -1, NULL, 0) = 1
+4831  futex(0x959ca0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... futex resumed>)              = 0
+4831  <... futex resumed>)              = 1
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  accept4(3,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... accept4 resumed>{sa_family=AF_INET6, sin6_port=htons(52192), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28], SOCK_CLOEXEC|SOCK_NONBLOCK) = 8
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 8, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=208666631, u64=9212757557967323143}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_ctl resumed>)          = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  getsockname(8,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... getsockname resumed>{sa_family=AF_INET6, sin6_port=htons(8080), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28]) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... setsockopt resumed>)         = 0
+4831  setsockopt(8, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  setsockopt(8, SOL_TCP, TCP_KEEPINTVL, [15], 4 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... setsockopt resumed>)         = 0
+4831  setsockopt(8, SOL_TCP, TCP_KEEPIDLE, [15], 4) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1) = 1
+4833  <... futex resumed>)              = 0
+4831  accept4(3,  <unfinished ...>
+4833  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... accept4 resumed>0xc000062aac, [112], SOCK_CLOEXEC|SOCK_NONBLOCK) = -1 EAGAIN (Ресурс временно недоступен)
+4833  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT, data={u32=208666631, u64=9212757557967323143}}], 128, 0, NULL, 0) = 1
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  epoll_pwait(5,  <unfinished ...>
+4831  read(8, "GET /bugs HTTP/1.1\r\nHost: localhost:8080\r\nUser-Agent: curl/7.88.1\r\nAccept: */*\r\n\r\n", 4096) = 82
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  futex(0xc000088148, FUTEX_WAKE_PRIVATE, 1) = 1
+4835  <... futex resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  write(7, "\0", 1 <unfinished ...>
+4835  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=10191840, u64=10191840}}], 128, -1, NULL, 0) = 1
+4831  <... write resumed>)              = 1
+4833  read(6,  <unfinished ...>
+4835  <... nanosleep resumed>NULL)      = 0
+4831  read(8,  <unfinished ...>
+4835  futex(0xc000088148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  <... read resumed>"\0", 16)       = 1
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... read resumed>0xc0001151b1, 1) = -1 EAGAIN (Ресурс временно недоступен)
+4833  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4833  epoll_pwait(5,  <unfinished ...>
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  futex(0x958280, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=2, tv_nsec=999617089}) = -1 ETIMEDOUT (Время ожидания соединения истекло)
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4833  <... epoll_pwait resumed>[], 128, 2999, NULL, 0) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  futex(0x958280, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... futex resumed>)              = 1
+4831  <... futex resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315371402344060.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4833  <... openat resumed>)             = 76
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(76, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4833  fcntl(76, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 76, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413764, u64=9212757557951070276}}) = -1 EPERM (Операция не позволена)
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fcntl(76, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4833  fcntl(76, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  write(76, "2024-10-19T08:22:51+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fork( <unfinished ...>
+4832  getpid()                          = 4831
+4832  tgkill(4831, 4833, SIGURG)        = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fork resumed>)               = 5142
+4833  --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=4831, si_uid=0} ---
+4832  <... nanosleep resumed>NULL)      = 0
+4833  rt_sigreturn({mask=[]} <unfinished ...>
+4832  getpid( <unfinished ...>
+4833  <... rt_sigreturn resumed>)       = 5142
+4832  <... getpid resumed>)             = 4831
+5142  futex(0xc000088148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4833  futex(0xc000088148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  tgkill(4831, 4833, SIGURG <unfinished ...>
+5142  <... futex resumed>)              = 0
+4833  <... futex resumed>)              = 1
+4835  <... futex resumed>)              = 0
+4832  <... tgkill resumed>)             = 0
+4833  --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=4831, si_uid=0} ---
+5142  write(7, "\0", 1 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+5142  <... write resumed>)              = 1
+4835  futex(0xc000059948, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4833  rt_sigreturn({mask=[]} <unfinished ...>
+5142  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4835  <... futex resumed>)              = 1
+4834  <... futex resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=10191840, u64=10191840}}], 128, -1, NULL, 0) = 1
+4833  <... rt_sigreturn resumed>)       = 1
+4834  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  read(6,  <unfinished ...>
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315371406362095.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4831  <... read resumed>"\0", 16)       = 1
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4835  <... openat resumed>)             = 77
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4835  fcntl(77, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4835  fcntl(77, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... fcntl resumed>)              = 0
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 77, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413765, u64=9212757557951070277}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(77, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4835  fcntl(77, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  write(77, "2024-10-19T08:22:51+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315371408275445.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... openat resumed>)             = 78
+4835  fcntl(78, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(78, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 78, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413766, u64=9212757557951070278}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(78, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4835  fcntl(78, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  write(78, "2024-10-19T08:22:51+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315371409620251.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... openat resumed>)             = 79
+4832  <... nanosleep resumed>NULL)      = 0
+4835  fcntl(79, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4835  fcntl(79, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 79, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413767, u64=9212757557951070279}}) = -1 EPERM (Операция не позволена)
+4835  fcntl(79, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4835  fcntl(79, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  write(79, "2024-10-19T08:22:51+03:00", 25) = 25
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315371410460054.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... openat resumed>)             = 80
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(80, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4835  fcntl(80, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 80, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413768, u64=9212757557951070280}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(80, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4835  fcntl(80, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4835  write(80, "2024-10-19T08:22:51+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315371410866460.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... openat resumed>)             = 81
+4835  fcntl(81, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4835  fcntl(81, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 81, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413769, u64=9212757557951070281}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4835  fcntl(81, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4835  fcntl(81, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4835  write(81, "2024-10-19T08:22:51+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... write resumed>)              = 25
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315371411212510.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 82
+4835  fcntl(82, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(82, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 82, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413770, u64=9212757557951070282}}) = -1 EPERM (Операция не позволена)
+4835  fcntl(82, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(82, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4835  write(82, "2024-10-19T08:22:51+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315371411543715.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... openat resumed>)             = 83
+4835  fcntl(83, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4835  fcntl(83, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 83, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413771, u64=9212757557951070283}}) = -1 EPERM (Операция не позволена)
+4835  fcntl(83, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4835  fcntl(83, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  write(83, "2024-10-19T08:22:51+03:00", 25) = 25
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315371411885228.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... openat resumed>)             = 84
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(84, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4835  fcntl(84, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 84, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413772, u64=9212757557951070284}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(84, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4835  fcntl(84, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4835  write(84, "2024-10-19T08:22:51+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... write resumed>)              = 25
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  write(1, "Recovered from panic: Random panic occurred!\n", 45) = 45
+4832  <... nanosleep resumed>NULL)      = 0
+4835  write(8, "HTTP/1.1 500 Internal Server Error\r\nContent-Type: text/plain; charset=utf-8\r\nX-Content-Type-Options: nosniff\r\nDate: Sat, 19 Oct 2024 05:22:51 GMT\r\nContent-Length: 22\r\n\r\nInternal Server Error\n", 191 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... write resumed>)              = 191
+4832  <... nanosleep resumed>NULL)      = 0
+4835  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... futex resumed>)              = 1
+4833  <... futex resumed>)              = 0
+4835  read(8,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... read resumed>0xc0000d6000, 4096) = -1 EAGAIN (Ресурс временно недоступен)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  futex(0xc000088148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4831  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT|EPOLLRDHUP, data={u32=208666631, u64=9212757557967323143}}], 128, -1, NULL, 0) = 1
+4831  read(8,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... read resumed>"", 4096)       = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_ctl(5, EPOLL_CTL_DEL, 8, 0xc0000cb914) = 0
+4831  close(8 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... close resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_pwait(5, [], 128, 0, NULL, 0) = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0} <unfinished ...>
+4831  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=241172482, u64=9212757557999828994}}], 128, -1, NULL, 0) = 1
+4831  futex(0x959ca0, FUTEX_WAKE_PRIVATE, 1) = 1
+4831  accept4(3, {sa_family=AF_INET6, sin6_port=htons(52194), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28], SOCK_CLOEXEC|SOCK_NONBLOCK) = 8
+4832  <... futex resumed>)              = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 8, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=208666632, u64=9212757557967323144}}) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  getsockname(8, {sa_family=AF_INET6, sin6_port=htons(8080), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28]) = 0
+4831  setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+4831  setsockopt(8, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+4831  setsockopt(8, SOL_TCP, TCP_KEEPINTVL, [15], 4 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... setsockopt resumed>)         = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  setsockopt(8, SOL_TCP, TCP_KEEPIDLE, [15], 4) = 0
+4831  futex(0xc000088148, FUTEX_WAKE_PRIVATE, 1) = 1
+4832  <... nanosleep resumed>NULL)      = 0
+4831  accept4(3,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... futex resumed>)              = 0
+4831  <... accept4 resumed>0xc000062aac, [112], SOCK_CLOEXEC|SOCK_NONBLOCK) = -1 EAGAIN (Ресурс временно недоступен)
+4831  read(8,  <unfinished ...>
+4835  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... read resumed>"GET /bugs HTTP/1.1\r\nHost: localhost:8080\r\nUser-Agent: curl/7.88.1\r\nAccept: */*\r\n\r\n", 4096) = 82
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... epoll_pwait resumed>[{events=EPOLLOUT, data={u32=208666632, u64=9212757557967323144}}], 128, 0, NULL, 0) = 1
+4831  read(8, 0xc000115391, 1)          = -1 EAGAIN (Ресурс временно недоступен)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  epoll_pwait(5,  <unfinished ...>
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4831  futex(0x958280, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=2, tv_nsec=999845965} <unfinished ...>
+4835  <... epoll_pwait resumed>[], 128, 2999, NULL, 0) = 0
+4835  epoll_pwait(5, [], 128, 0, NULL, 0) = 0
+4832  <... futex resumed>)              = -1 ETIMEDOUT (Время ожидания соединения истекло)
+4835  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... epoll_pwait resumed>[], 128, 1, NULL, 0) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  futex(0x958280, FUTEX_WAKE_PRIVATE, 1) = 1
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... futex resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315375232810717.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4835  <... openat resumed>)             = 85
+4832  <... nanosleep resumed>NULL)      = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0} <unfinished ...>
+4835  futex(0x959ca0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... futex resumed>)              = -1 EAGAIN (Ресурс временно недоступен)
+4835  <... futex resumed>)              = 0
+4832  sched_yield()                     = 0
+4835  fcntl(85, F_GETFL <unfinished ...>
+4832  futex(0x959bb8, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4835  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... futex resumed>)              = 0
+4835  fcntl(85, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... fcntl resumed>)              = 0
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 85, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413773, u64=9212757557951070285}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  getpid( <unfinished ...>
+4835  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... getpid resumed>)             = 4831
+4835  <... futex resumed>)              = 1
+4832  tgkill(4831, 4835, SIGURG <unfinished ...>
+4835  fcntl(85, F_GETFL <unfinished ...>
+4833  <... futex resumed>)              = 0
+4835  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  <... tgkill resumed>)             = 0
+4835  --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=4831, si_uid=0} ---
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  rt_sigreturn({mask=[]})           = 34817
+4832  <... nanosleep resumed>NULL)      = 0
+4835  fcntl(85, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... fcntl resumed>)              = 0
+4835  write(85, "2024-10-19T08:22:55+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... write resumed>)              = 25
+4835  fork( <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... fork resumed>)               = 5149
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+5149  write(7, "\0", 1 <unfinished ...>
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315375236539776.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+5149  <... write resumed>)              = 1
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=10191840, u64=10191840}}], 128, -1, NULL, 0) = 1
+5149  futex(0xc000088148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4835  <... openat resumed>)             = 86
+4832  <... nanosleep resumed>NULL)      = 0
+4831  read(6,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... read resumed>"\0", 16)       = 1
+4835  fcntl(86, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4835  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4835  fcntl(86, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4835  <... fcntl resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 86, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413774, u64=9212757557951070286}}) = -1 EPERM (Операция не позволена)
+4832  <... nanosleep resumed>NULL)      = 0
+4835  fcntl(86, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4835  fcntl(86, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  write(86, "2024-10-19T08:22:55+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... write resumed>)              = 25
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315375238892851.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... openat resumed>)             = 87
+4832  <... nanosleep resumed>NULL)      = 0
+4835  fcntl(87, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(87, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 87, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413775, u64=9212757557951070287}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4835  fcntl(87, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(87, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4835  write(87, "2024-10-19T08:22:55+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... write resumed>)              = 25
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315375240175285.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644) = 88
+4835  fcntl(88, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(88, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 88, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413776, u64=9212757557951070288}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4835  fcntl(88, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(88, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4835  write(88, "2024-10-19T08:22:55+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... write resumed>)              = 25
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315375241369622.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... openat resumed>)             = 89
+4835  fcntl(89, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(89, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 89, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413777, u64=9212757557951070289}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(89, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4835  fcntl(89, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... fcntl resumed>)              = 0
+4835  write(89, "2024-10-19T08:22:55+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315375242410159.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... openat resumed>)             = 90
+4835  fcntl(90, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4835  fcntl(90, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... fcntl resumed>)              = 0
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 90, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413778, u64=9212757557951070290}}) = -1 EPERM (Операция не позволена)
+4835  fcntl(90, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(90, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4835  write(90, "2024-10-19T08:22:55+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315375242801990.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... openat resumed>)             = 91
+4835  fcntl(91, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4835  fcntl(91, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... fcntl resumed>)              = 0
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 91, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413779, u64=9212757557951070291}}) = -1 EPERM (Операция не позволена)
+4835  fcntl(91, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(91, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4835  write(91, "2024-10-19T08:22:55+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4835  openat(AT_FDCWD, "/tmp/server/file_1729315375243199263.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... openat resumed>)             = 92
+4835  fcntl(92, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4835  fcntl(92, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... fcntl resumed>)              = 0
+4835  epoll_ctl(5, EPOLL_CTL_ADD, 92, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413780, u64=9212757557951070292}}) = -1 EPERM (Операция не позволена)
+4835  fcntl(92, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  fcntl(92, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4835  write(92, "2024-10-19T08:22:55+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4835  write(1, "Recovered from panic: Random panic occurred!\n", 45 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... write resumed>)              = 45
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  write(8, "HTTP/1.1 500 Internal Server Error\r\nContent-Type: text/plain; charset=utf-8\r\nX-Content-Type-Options: nosniff\r\nDate: Sat, 19 Oct 2024 05:22:55 GMT\r\nContent-Length: 22\r\n\r\nInternal Server Error\n", 191 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... write resumed>)              = 191
+4835  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1) = 1
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... futex resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  read(8,  <unfinished ...>
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4835  <... read resumed>0xc0000d6000, 4096) = -1 EAGAIN (Ресурс временно недоступен)
+4831  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT|EPOLLRDHUP, data={u32=208666632, u64=9212757557967323144}}], 128, -1, NULL, 0) = 1
+4835  futex(0xc000088148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4831  read(8,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... read resumed>"", 4096)       = 0
+4831  epoll_ctl(5, EPOLL_CTL_DEL, 8, 0xc0000cb914 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_ctl resumed>)          = 0
+4831  close(8)                          = 0
+4831  epoll_pwait(5, [], 128, 0, NULL, 0) = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0} <unfinished ...>
+4831  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=241172482, u64=9212757557999828994}}], 128, -1, NULL, 0) = 1
+4831  futex(0x959ca0, FUTEX_WAKE_PRIVATE, 1) = 1
+4832  <... futex resumed>)              = 0
+4831  accept4(3,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... accept4 resumed>{sa_family=AF_INET6, sin6_port=htons(40936), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28], SOCK_CLOEXEC|SOCK_NONBLOCK) = 8
+4832  <... nanosleep resumed>NULL)      = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 8, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=208666633, u64=9212757557967323145}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_ctl resumed>)          = 0
+4831  getsockname(8,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... getsockname resumed>{sa_family=AF_INET6, sin6_port=htons(8080), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28]) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  setsockopt(8, SOL_SOCKET, SO_KEEPALIVE, [1], 4 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... setsockopt resumed>)         = 0
+4831  setsockopt(8, SOL_TCP, TCP_KEEPINTVL, [15], 4) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  setsockopt(8, SOL_TCP, TCP_KEEPIDLE, [15], 4 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... setsockopt resumed>)         = 0
+4831  futex(0xc000088148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... futex resumed>)              = 0
+4831  <... futex resumed>)              = 1
+4835  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT, data={u32=208666633, u64=9212757557967323145}}], 128, 0, NULL, 0) = 1
+4831  accept4(3,  <unfinished ...>
+4835  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... accept4 resumed>0xc000062aac, [112], SOCK_CLOEXEC|SOCK_NONBLOCK) = -1 EAGAIN (Ресурс временно недоступен)
+4835  <... futex resumed>)              = 1
+4833  <... futex resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  epoll_pwait(5,  <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4833  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4833  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  read(8,  <unfinished ...>
+4831  futex(0x958280, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... read resumed>"GET /bugs HTTP/1.1\r\nHost: localhost:8080\r\nUser-Agent: curl/7.88.1\r\nAccept: */*\r\n\r\n", 4096) = 82
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  futex(0x958280, FUTEX_WAKE_PRIVATE, 1) = 1
+4831  <... futex resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4835  write(7, "\0", 1 <unfinished ...>
+4831  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4835  <... write resumed>)              = 1
+4833  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=10191840, u64=10191840}}], 128, -1, NULL, 0) = 1
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  read(8,  <unfinished ...>
+4833  read(6,  <unfinished ...>
+4831  <... nanosleep resumed>NULL)      = 0
+4835  <... read resumed>0xc0001154b1, 1) = -1 EAGAIN (Ресурс временно недоступен)
+4833  <... read resumed>"\0", 16)       = 1
+4835  futex(0xc000088148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4831  futex(0x958280, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=3, tv_nsec=999218076} <unfinished ...>
+4833  <... epoll_pwait resumed>[], 128, 3999, NULL, 0) = 0
+4832  <... futex resumed>)              = -1 ETIMEDOUT (Время ожидания соединения истекло)
+4833  futex(0xc000088148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... futex resumed>)              = 1
+4835  <... futex resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4835  epoll_pwait(5,  <unfinished ...>
+4833  openat(AT_FDCWD, "/tmp/server/file_1729315379985652061.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4835  epoll_pwait(5,  <unfinished ...>
+4833  <... openat resumed>)             = 93
+4832  <... nanosleep resumed>NULL)      = 0
+4833  futex(0x959ca0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0} <unfinished ...>
+4833  <... futex resumed>)              = 0
+4832  <... futex resumed>)              = -1 EAGAIN (Ресурс временно недоступен)
+4833  fcntl(93, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4833  fcntl(93, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4833  epoll_ctl(5, EPOLL_CTL_ADD, 93, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413781, u64=9212757557951070293}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4833  fcntl(93, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4833  fcntl(93, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4833  write(93, "2024-10-19T08:22:59+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... write resumed>)              = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4833  fork( <unfinished ...>
+4832  getpid()                          = 4831
+4832  tgkill(4831, 4833, SIGURG)        = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... fork resumed>)               = 5156
+4832  <... nanosleep resumed>NULL)      = 0
+4833  --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=4831, si_uid=0} ---
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  rt_sigreturn({mask=[]} <unfinished ...>
+5156  futex(0x958280, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+5156  <... futex resumed>)              = 0
+4833  <... rt_sigreturn resumed>)       = 5156
+4832  getpid()                          = 4831
+5156  write(7, "\0", 1 <unfinished ...>
+4832  tgkill(4831, 4833, SIGURG <unfinished ...>
+5156  <... write resumed>)              = 1
+4833  futex(0x958280, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+5156  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4835  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=10191840, u64=10191840}}], 128, -1, NULL, 0) = 1
+4832  <... tgkill resumed>)             = 0
+4833  <... futex resumed>)              = 1
+4831  <... futex resumed>)              = 0
+4835  read(6,  <unfinished ...>
+4833  --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=4831, si_uid=0} ---
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... read resumed>"\0", 16)       = 1
+4833  rt_sigreturn({mask=[]} <unfinished ...>
+4831  futex(0xc000059948, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4833  <... rt_sigreturn resumed>)       = 1
+4832  <... nanosleep resumed>NULL)      = 0
+4835  epoll_pwait(5,  <unfinished ...>
+4834  <... futex resumed>)              = 0
+4833  epoll_pwait(5,  <unfinished ...>
+4831  <... futex resumed>)              = 1
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4834  epoll_pwait(5,  <unfinished ...>
+4833  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4834  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4833  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  futex(0xc000088148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4834  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315379989906481.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... openat resumed>)             = 94
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(94, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4831  fcntl(94, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 94, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413782, u64=9212757557951070294}}) = -1 EPERM (Операция не позволена)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(94, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4831  fcntl(94, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  write(94, "2024-10-19T08:22:59+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... write resumed>)              = 25
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315379991554495.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... openat resumed>)             = 95
+4831  fcntl(95, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  fcntl(95, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 95, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413783, u64=9212757557951070295}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4831  fcntl(95, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  fcntl(95, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  write(95, "2024-10-19T08:22:59+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... write resumed>)              = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315379992693100.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... openat resumed>)             = 96
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(96, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4831  fcntl(96, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 96, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413784, u64=9212757557951070296}}) = -1 EPERM (Операция не позволена)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(96, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4831  fcntl(96, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  write(96, "2024-10-19T08:22:59+03:00", 25) = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315379993792640.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... openat resumed>)             = 97
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  fcntl(97, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(97, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 97, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413785, u64=9212757557951070297}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  fcntl(97, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(97, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0
+4831  write(97, "2024-10-19T08:22:59+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... write resumed>)              = 25
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315379994987060.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... openat resumed>)             = 98
+4831  fcntl(98, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  fcntl(98, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 98, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413786, u64=9212757557951070298}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4831  fcntl(98, F_GETFL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  fcntl(98, F_SETFL, O_WRONLY|O_LARGEFILE) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  write(98, "2024-10-19T08:22:59+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... write resumed>)              = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315379996098601.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4831  <... openat resumed>)             = 99
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  fcntl(99, F_GETFL)                = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(99, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 99, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413787, u64=9212757557951070299}} <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_ctl resumed>)          = -1 EPERM (Операция не позволена)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  fcntl(99, F_GETFL)                = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(99, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0
+4831  write(99, "2024-10-19T08:22:59+03:00", 25 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... write resumed>)              = 25
+4831  write(1, "Recovered from panic: Random panic occurred!\n", 45 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... write resumed>)              = 45
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  write(8, "HTTP/1.1 500 Internal Server Error\r\nContent-Type: text/plain; charset=utf-8\r\nX-Content-Type-Options: nosniff\r\nDate: Sat, 19 Oct 2024 05:22:59 GMT\r\nContent-Length: 22\r\n\r\nInternal Server Error\n", 191 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... write resumed>)              = 191
+4831  futex(0xc000059948, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... futex resumed>)              = 1
+4834  <... futex resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4831  futex(0xc000059948, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4834  <... futex resumed>)              = -1 EAGAIN (Ресурс временно недоступен)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... futex resumed>)              = 0
+4834  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT|EPOLLRDHUP, data={u32=208666633, u64=9212757557967323145}}], 128, -1, NULL, 0) = 1
+4831  read(8,  <unfinished ...>
+4834  <... nanosleep resumed>NULL)      = 0
+4833  epoll_pwait(5,  <unfinished ...>
+4834  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4831  <... read resumed>"", 4096)       = 0
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_ctl(5, EPOLL_CTL_DEL, 8, 0xc000063914 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_ctl resumed>)          = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  close(8)                          = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0} <unfinished ...>
+4831  futex(0x958280, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4834  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=241172482, u64=9212757557999828994}}], 128, -1, NULL, 0) = 1
+4834  futex(0x959ca0, FUTEX_WAKE_PRIVATE, 1) = 1
+4832  <... futex resumed>)              = 0
+4834  accept4(3,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... accept4 resumed>{sa_family=AF_INET6, sin6_port=htons(40948), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28], SOCK_CLOEXEC|SOCK_NONBLOCK) = 8
+4832  <... nanosleep resumed>NULL)      = 0
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 8, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=208666634, u64=9212757557967323146}} <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... epoll_ctl resumed>)          = 0
+4834  getsockname(8,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... getsockname resumed>{sa_family=AF_INET6, sin6_port=htons(8080), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28]) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  setsockopt(8, SOL_SOCKET, SO_KEEPALIVE, [1], 4 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... setsockopt resumed>)         = 0
+4834  setsockopt(8, SOL_TCP, TCP_KEEPINTVL, [15], 4 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... setsockopt resumed>)         = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  setsockopt(8, SOL_TCP, TCP_KEEPIDLE, [15], 4) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  futex(0x958280, FUTEX_WAKE_PRIVATE, 1) = 1
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... futex resumed>)              = 0
+4834  accept4(3,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4834  <... accept4 resumed>0xc000062aac, [112], SOCK_CLOEXEC|SOCK_NONBLOCK) = -1 EAGAIN (Ресурс временно недоступен)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT, data={u32=208666634, u64=9212757557967323146}}], 128, 0, NULL, 0) = 1
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  read(8,  <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4834  <... read resumed>"GET /bugs HTTP/1.1\r\nHost: localhost:8080\r\nUser-Agent: curl/7.88.1\r\nAccept: */*\r\n\r\n", 4096) = 82
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1) = 1
+4833  <... futex resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  write(7, "\0", 1 <unfinished ...>
+4833  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4834  <... write resumed>)              = 1
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=10191840, u64=10191840}}], 128, -1, NULL, 0) = 1
+4834  read(8,  <unfinished ...>
+4833  <... nanosleep resumed>NULL)      = 0
+4834  <... read resumed>0xc000115661, 1) = -1 EAGAIN (Ресурс временно недоступен)
+4831  read(6,  <unfinished ...>
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4834  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... read resumed>"\0", 16)       = 1
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=1, tv_nsec=999608608} <unfinished ...>
+4831  epoll_pwait(5, [], 128, 0, NULL, 0) = 0
+4831  epoll_pwait(5,  <unfinished ...>
+4832  <... futex resumed>)              = -1 ETIMEDOUT (Время ожидания соединения истекло)
+4831  <... epoll_pwait resumed>[], 128, 1999, NULL, 0) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  futex(0xc000059948, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4834  <... futex resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... futex resumed>)              = 1
+4834  epoll_pwait(5,  <unfinished ...>
+4832  getpid( <unfinished ...>
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315382804961670.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+4834  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4832  <... getpid resumed>)             = 4831
+4834  epoll_pwait(5,  <unfinished ...>
+4832  tgkill(4831, 4831, SIGURG <unfinished ...>
+4831  <... openat resumed>)             = 100
+4832  <... tgkill resumed>)             = 0
+4831  --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=4831, si_uid=0} ---
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  rt_sigreturn({mask=[]})           = 100
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(100, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(100, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 100, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413788, u64=9212757557951070300}}) = -1 EPERM (Операция не позволена)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(100, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4831  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  fcntl(100, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4831  write(100, "2024-10-19T08:23:02+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... write resumed>)              = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  fork( <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fork resumed>)               = 5161
+4832  <... nanosleep resumed>NULL)      = 0
+5161  write(7, "\0", 1 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  openat(AT_FDCWD, "/tmp/server/file_1729315382809976620.txt", O_WRONLY|O_CREAT|O_CLOEXEC, 0644 <unfinished ...>
+5161  <... write resumed>)              = 1
+4834  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=10191840, u64=10191840}}], 128, -1, NULL, 0) = 1
+5161  futex(0x958280, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... openat resumed>)             = 101
+4834  read(6,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... read resumed>"\0", 16)       = 1
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(101, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+4834  epoll_pwait(5,  <unfinished ...>
+4831  fcntl(101, F_SETFL, O_WRONLY|O_NONBLOCK|O_LARGEFILE <unfinished ...>
+4834  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0
+4834  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  epoll_ctl(5, EPOLL_CTL_ADD, 101, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=192413789, u64=9212757557951070301}}) = -1 EPERM (Операция не позволена)
+4832  <... nanosleep resumed>NULL)      = 0
+4831  fcntl(101, F_GETFL <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... fcntl resumed>)              = 0x8801 (flags O_WRONLY|O_NONBLOCK|O_LARGEFILE)
+4831  fcntl(101, F_SETFL, O_WRONLY|O_LARGEFILE <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... fcntl resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4831  write(101, "2024-10-19T08:23:02+03:00", 25 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... write resumed>)              = 25
+4832  <... nanosleep resumed>NULL)      = 0
+4831  write(1, "Recovered from panic: Random panic occurred!\n", 45 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... write resumed>)              = 45
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  write(8, "HTTP/1.1 500 Internal Server Error\r\nContent-Type: text/plain; charset=utf-8\r\nX-Content-Type-Options: nosniff\r\nDate: Sat, 19 Oct 2024 05:23:02 GMT\r\nContent-Length: 22\r\n\r\nInternal Server Error\n", 191 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4831  <... write resumed>)              = 191
+4832  <... nanosleep resumed>NULL)      = 0
+4831  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... futex resumed>)              = 0
+4831  <... futex resumed>)              = 1
+4833  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4831  read(8,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  <... nanosleep resumed>NULL)      = 0
+4831  <... read resumed>0xc0000d6000, 4096) = -1 EAGAIN (Ресурс временно недоступен)
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4834  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT|EPOLLRDHUP, data={u32=208666634, u64=9212757557967323146}}], 128, -1, NULL, 0) = 1
+4831  futex(0x958280, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4834  read(8,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... read resumed>"", 4096)       = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  epoll_ctl(5, EPOLL_CTL_DEL, 8, 0xc000063914) = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  close(8 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... close resumed>)              = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4834  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0} <unfinished ...>
+4834  <... epoll_pwait resumed>[{events=EPOLLIN, data={u32=241172482, u64=9212757557999828994}}], 128, -1, NULL, 0) = 1
+4834  futex(0x959ca0, FUTEX_WAKE_PRIVATE, 1) = 1
+4832  <... futex resumed>)              = 0
+4834  accept4(3,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... accept4 resumed>{sa_family=AF_INET6, sin6_port=htons(56908), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28], SOCK_CLOEXEC|SOCK_NONBLOCK) = 8
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  epoll_ctl(5, EPOLL_CTL_ADD, 8, {events=EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data={u32=208666635, u64=9212757557967323147}}) = 0
+4834  getsockname(8,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... getsockname resumed>{sa_family=AF_INET6, sin6_port=htons(8080), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_scope_id=0}, [112 => 28]) = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  setsockopt(8, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+4834  setsockopt(8, SOL_SOCKET, SO_KEEPALIVE, [1], 4 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... setsockopt resumed>)         = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  setsockopt(8, SOL_TCP, TCP_KEEPINTVL, [15], 4) = 0
+4834  setsockopt(8, SOL_TCP, TCP_KEEPIDLE, [15], 4 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... setsockopt resumed>)         = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  futex(0x958280, FUTEX_WAKE_PRIVATE, 1) = 1
+4832  <... nanosleep resumed>NULL)      = 0
+4831  <... futex resumed>)              = 0
+4834  accept4(3,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  <... accept4 resumed>0xc000062aac, [112], SOCK_CLOEXEC|SOCK_NONBLOCK) = -1 EAGAIN (Ресурс временно недоступен)
+4831  epoll_pwait(5, [{events=EPOLLIN|EPOLLOUT, data={u32=208666635, u64=9212757557967323147}}], 128, 0, NULL, 0) = 1
+4834  read(8,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... read resumed>"GET /bugs HTTP/1.1\r\nHost: localhost:8080\r\nUser-Agent: curl/7.88.1\r\nAccept: */*\r\n\r\n", 4096) = 82
+4831  epoll_pwait(5,  <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  futex(0xc000059148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... futex resumed>)              = 1
+4833  <... futex resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4834  write(8, "HTTP/1.1 503 Service Unavailable\r\nContent-Type: text/plain; charset=utf-8\r\nX-Content-Type-Options: nosniff\r\nDate: Sat, 19 Oct 2024 05:23:03 GMT\r\nContent-Length: 50\r\n\r\nServer refuses to handle requests after 10th call\n", 217 <unfinished ...>
+4833  <... nanosleep resumed>NULL)      = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4834  <... write resumed>)              = 217
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4834  futex(0xc000059948, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  futex(0xc000088148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... futex resumed>)              = 1
+4835  <... futex resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  futex(0xc000088148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  futex(0xc000088148, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4835  <... futex resumed>)              = 0
+4833  <... futex resumed>)              = 1
+4831  <... epoll_pwait resumed>[{events=EPOLLIN|EPOLLOUT|EPOLLRDHUP, data={u32=208666635, u64=9212757557967323147}}], 128, -1, NULL, 0) = 1
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  nanosleep({tv_sec=0, tv_nsec=3000},  <unfinished ...>
+4833  read(8,  <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4833  <... read resumed>"", 4096)       = 0
+4831  <... epoll_pwait resumed>[], 128, 0, NULL, 0) = 0
+4835  <... nanosleep resumed>NULL)      = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4835  futex(0xc000088148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4833  epoll_ctl(5, EPOLL_CTL_DEL, 8, 0xc000063914 <unfinished ...>
+4831  epoll_pwait(5,  <unfinished ...>
+4833  <... epoll_ctl resumed>)          = 0
+4832  <... nanosleep resumed>NULL)      = 0
+4833  close(8 <unfinished ...>
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4833  <... close resumed>)              = 0
+4832  nanosleep({tv_sec=0, tv_nsec=20000},  <unfinished ...>
+4833  futex(0xc000059148, FUTEX_WAIT_PRIVATE, 0, NULL <unfinished ...>
+4832  <... nanosleep resumed>NULL)      = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0}) = -1 ETIMEDOUT (Время ожидания соединения истекло)
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0}) = -1 ETIMEDOUT (Время ожидания соединения истекло)
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0}) = -1 ETIMEDOUT (Время ожидания соединения истекло)
+4832  nanosleep({tv_sec=0, tv_nsec=20000}, NULL) = 0
+4832  futex(0x959ca0, FUTEX_WAIT_PRIVATE, 0, {tv_sec=60, tv_nsec=0} <unfinished ...>
+4836  <... futex resumed>)              = ?
+4835  <... futex resumed>)              = ?
+4834  <... futex resumed>)              = ?
+4833  <... futex resumed>)              = ?
+4832  <... futex resumed>)              = ?
+4831  <... epoll_pwait resumed> <unfinished ...>) = ?
+4836  +++ killed by SIGKILL +++
+4835  +++ killed by SIGKILL +++
+4834  +++ killed by SIGKILL +++
+4833  +++ killed by SIGKILL +++
+4832  +++ killed by SIGKILL +++
+4831  +++ killed by SIGKILL +++
+5119  <... futex resumed>)              = ?
+5114  <... futex resumed>)              = ?
+5107  <... futex resumed>)              = ?
+5114  +++ killed by SIGKILL +++
+5107  +++ killed by SIGKILL +++
+5119  +++ killed by SIGKILL +++
+5136  <... futex resumed>)              = ?
+5130  <... futex resumed>)              = ?
+5126  <... futex resumed>)              = ?
+5136  +++ killed by SIGKILL +++
+5130  +++ killed by SIGKILL +++
+5126  +++ killed by SIGKILL +++
+5156  <... futex resumed>)              = ?
+5149  <... futex resumed>)              = ?
+5142  <... futex resumed>)              = ?
+5156  +++ killed by SIGKILL +++
+5142  +++ killed by SIGKILL +++
+5149  +++ killed by SIGKILL +++
+5161  <... futex resumed>)              = ?
+5161  +++ killed by SIGKILL +++
